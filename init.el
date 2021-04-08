@@ -9,7 +9,7 @@
 (require 'init-org)
 (require 'init-keybindings)
 
-(load "~/.emacs.d/lisp/crc-mode.el")
+;;(load "~/.emacs.d/lisp/crc-mode.el")
 
 ;; 快速打开配置文件
 (defun open-init-file()
@@ -24,4 +24,5 @@
   (setenv "HOME" dir)
   (message (format "HOME location is %s" (getenv "HOME"))))
 
-(set-home-dir "c:/Users/leo.zhang")
+;;(set-home-dir "c:/Users/leo.zhang")
+(set-home-dir "c:/Users/lizha")

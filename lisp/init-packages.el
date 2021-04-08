@@ -28,10 +28,14 @@
 		      exec-path-from-shell
 		      ;; --- Theme ---
 		      ;; monokai-theme
+		      powerline-evil
+		      ;;zenburn 
 		      ;; --- Search  ---
 		      helm-ag
 		      ;; --- font ---
 		      cnfonts
+		      ;; --- Org mode ---
+		      org-bullets
 		      ) "Default packages")
 
 (setq package-selected-packages my/packages)
