@@ -42,7 +42,6 @@
 (setq org-agenda-files (list "~/Desktop/ANZJCT.org"))
 
 ;; Enable org-bullets
-;;(add-to-list 'load-path "~/.emacs.d/org-bullets")
 (require 'org-bullets)
 ;; 设置bullet list
 ;; ▲△▼▽●○◆◇■□★☆▶▷◀◁◑◐·

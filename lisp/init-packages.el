@@ -59,7 +59,6 @@
 ;; ============================== Evil ============================== 
 ;; Make <Tab> key work in org mode in Evil
 (setq evil-want-C-i-jump nil)
-;;(add-to-list 'load-path "~/.emacs.d/evil")
 (require 'evil)
 (global-evil-leader-mode)
 (evil-mode 1)

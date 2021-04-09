@@ -24,5 +24,6 @@
   (setenv "HOME" dir)
   (message (format "HOME location is %s" (getenv "HOME"))))
 
-;;(set-home-dir "c:/Users/leo.zhang")
-(set-home-dir "c:/Users/lizha")
+(if (file-exists-p "c:/Users/leo.zhang")
+    (set-home-dir "c:/Users/leo.zhang")
+  `(set-home-dir "c:/Users/lizha"))
