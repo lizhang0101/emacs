@@ -4,8 +4,7 @@
 ;; You may delete these explanatory comments.
 (require 'package)
 (package-initialize)
-(setq package-archives '(("melpa" . "https://melpa.org/packages/")))
-;; (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(setq package-archives '(("melpa" . "https://melpa.org/packages")))
 
 ;; cl - Common Lisp Extension
 (require 'cl)

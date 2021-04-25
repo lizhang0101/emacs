@@ -34,17 +34,29 @@
 ;; 让 spacemacs mode-line 中的 Unicode 图标正确显示。
 ;; (cnfonts-set-spacemacs-fallback-fonts)
 
-(custom-set-faces
+;;(custom-set-faces
  ;;'(default ((t (:family "Cascadia Mono" :foundry "outline" :slant normal :weight normal :height 130 :width normal)))))
- '(default ((t (:family "Cascadia Mono" :weight normal :height 120 :width normal)))))
+ ;;'(default ((t (:family "Cascadia Mono" :weight normal :height 120 :width normal)))))
 
 ;;; Setting English Font
 ;;(set-face-attribute
 ;;  'default nil :font "WenQuanYi Zen Hei Mono" :size 14)
 ;;;; Setting Chinese Font
-(dolist (charset '(kana han symbol cjk-misc bopomofo))
-  (set-fontset-font (frame-parameter nil 'font)
-           charset
-          (font-spec :family "Microsoft Yahei" :size 14)))
+(defun s-font()
+  (interactive)
+  '(default ((t (:family "Cascadia Mono" :weight normal :height 120 :width normal))))
+  (dolist (charset '(kana han symbol cjk-misc bopomofo))
+    (set-fontset-font (frame-parameter nil 'font)
+		      charset
+		      (font-spec :family "Microsoft Yahei" :size 14))))
+
+(add-to-list 'after-make-frame-functions
+	     (lambda (new-frame)
+	       (select-frame new-frame)
+	       (if window-system
+		   (s-font))))
+
+(if window-system
+    (s-font))
 
 (provide 'init-ui)
