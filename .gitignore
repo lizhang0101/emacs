@@ -1,4 +1,4 @@
-/*
-!.gitignore
-!init.el
-!/lisp/
+/elpa/
+/auto-save-list/
+/cnfonts/
+/recentf

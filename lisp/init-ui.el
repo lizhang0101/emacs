@@ -10,8 +10,8 @@
 ;; 关闭启动帮助画面
 (setq inhibit-splash-screen 1)
 
-;; 高亮当前行
-(global-hl-line-mode 1)
+;; 高亮当前行 - 在-nw模式下有问题
+;;(global-hl-line-mode 1)
 
 ;; Max window as default
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
