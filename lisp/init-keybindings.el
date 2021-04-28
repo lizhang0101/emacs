@@ -12,6 +12,7 @@
   (define-key company-active-map (kbd "C-p") #'company-select-previous))
 
 (global-set-key (kbd "C-c p s") 'helm-do-ag-project-root)
+(evil-leader/set-key "a" 'helm-do-ag-project-root)
 ;; (global-set-key (kbd "C-c p s") 'helm-do-ag)
 
 (provide 'init-keybindings)

@@ -2,9 +2,12 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
+
 (require 'package)
+;;(setq package-archives '(("melpa" . "https://melpa.org/packages")))
+(add-to-list 'package-archives
+             '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
-(setq package-archives '(("melpa" . "https://melpa.org/packages")))
 
 ;; cl - Common Lisp Extension
 (require 'cl)
@@ -16,6 +19,7 @@
 		      ;; --- Better Editor ---
 		      evil
 		      evil-leader
+		      evil-tabs
 		      hungry-delete
 		      swiper
 		      counsel
@@ -62,5 +66,6 @@
 (global-evil-leader-mode)
 (evil-mode 1)
 (evil-leader/set-leader ",")
+(global-evil-tabs-mode t)
 
 (provide 'init-packages)
