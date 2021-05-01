@@ -25,8 +25,10 @@
   (message (format "HOME location is %s" (getenv "HOME"))))
 
 (if (file-exists-p "c:/Users/leo.zhang")
-    (set-home-dir "c:/Users/leo.zhang")
-  `(set-home-dir "c:/Users/lizha"))
+  (set-home-dir "c:/Users/leo.zhang"))
+
+(if (file-exists-p "c:/Users/lizha")
+  (set-home-dir "c:/Users/lizha"))
 
 (if (file-exists-p "~/emacs")
     (add-to-list 'load-path "~/emacs/"))
