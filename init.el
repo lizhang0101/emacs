@@ -27,3 +27,9 @@
 (if (file-exists-p "c:/Users/leo.zhang")
     (set-home-dir "c:/Users/leo.zhang")
   `(set-home-dir "c:/Users/lizha"))
+
+(if (file-exists-p "~/emacs")
+    (add-to-list 'load-path "~/emacs/"))
+
+(if (file-exists-p "~/emacs")
+    (autoload 'crc-mode "crc-mode" "Major mode for editing CRC code" t))
