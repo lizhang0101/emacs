@@ -99,7 +99,10 @@
 ;; ============================== projectile ============================== 
 (projectile-mode 1)
 (setq projectile-completion-system 'ivy)
-(global-set-key (kbd "s-f") 'projectile-find-file)
-(global-set-key (kbd "s-F") 'projectile-grep)
+;;(global-set-key (kbd "s-f") 'projectile-find-file)
+(evil-leader/set-key "ff" 'projectile-find-file)
+;;(global-set-key (kbd "s-F") 'projectile-grep)
+;;(evil-leader/set-key "fg" 'projectile-grep)
+
 (provide 'init-packages)
 
