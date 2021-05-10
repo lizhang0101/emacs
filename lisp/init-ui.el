@@ -25,6 +25,7 @@
 ;;(custom-set-variables
 ;; '(package-selected-packages (quote (company zenburn-theme color-theme))))
 ;;(load-theme 'zenburn t)
+(load-theme 'monokai t)
 
 ;; ============================== FONT ============================== 
 ;; 配置cnfonts，原名chinese-font-setup

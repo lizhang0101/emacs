@@ -40,7 +40,8 @@
 		      ;; nodejs-repl
 		      exec-path-from-shell
 		      ;; --- Theme ---
-		      ;; monokai-theme
+		      monokai-theme
+		      zenburn-theme
 		      powerline-evil
 		      ;;zenburn 
 		      ;; --- Search  ---

@@ -35,3 +35,20 @@
 
 (if (file-exists-p "~/emacs")
     (autoload 'crc-mode "crc-mode" "Major mode for editing CRC code" t))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("78e9a3e1c519656654044aeb25acb8bec02579508c145b6db158d2cfad87c44e" "9abe2b502db3ed511fea7ab84b62096ba15a3a71cdb106fd989afa179ff8ab8d" default)))
+ '(package-selected-packages
+   (quote
+    (zzz-to-char company evil evil-leader hungry-delete swiper counsel smartparens projectile use-package exec-path-from-shell powerline-evil helm-ag cnfonts org-bullets))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
