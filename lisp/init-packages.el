@@ -78,6 +78,9 @@
   (exec-path-from-shell-initialize))
 
 ;; ============================== Evil ============================== 
+;; Make <Tab> key work in org mode in Evil
+(setq evil-want-C-i-jump nil)
+
 (use-package evil
   :ensure t
   :config
@@ -89,8 +92,6 @@
     (progn
       (global-evil-leader-mode)
       (setq evil-leader/in-all-states t)
-      ;; Make <Tab> key work in org mode in Evil
-      (setq evil-want-C-i-jump nil)
       (evil-leader/set-leader ","))))
 
 (use-package evil-nerd-commenter
