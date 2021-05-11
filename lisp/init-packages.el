@@ -28,6 +28,7 @@
 		      evil
 		      evil-leader
 		      evil-nerd-commenter
+		      which-key
 		      ;;evil-tabs
 		      hungry-delete
 		      swiper
@@ -137,6 +138,11 @@
 
 (use-package minions
   :config (minions-mode 1))
+
+;; ============================== Which key ============================== 
+(use-package which-key
+  :defer nil
+  :config (which-key-mode))
 
 (provide 'init-packages)
 
