@@ -17,8 +17,8 @@
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 ;; powline
-(require 'powerline-evil)
-(powerline-evil-vim-color-theme)
+;;(require 'powerline-evil)
+;;(powerline-evil-vim-color-theme)
 (display-time-mode t)
 
 ;; ============================== Color Scheme ============================== 
@@ -49,7 +49,7 @@
   (dolist (charset '(kana han symbol cjk-misc bopomofo))
     (set-fontset-font (frame-parameter nil 'font)
 		      charset
-		      (font-spec :family "Microsoft Yahei" :size 14))))
+		      (font-spec :family "WenQuanYi Zen Hei Mono" :size 14))))
 
 (add-to-list 'after-make-frame-functions
 	     (lambda (new-frame)
