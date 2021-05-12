@@ -91,10 +91,14 @@
       (setq evil-leader/in-all-states t)
       ;; Make <Tab> key work in org mode in Evil
       (setq evil-want-C-i-jump nil)
+      ;; (setq evil-symbol-word-search t)
       (evil-leader/set-leader ","))))
 
 (use-package evil-nerd-commenter
   :ensure t)
+
+(with-eval-after-load 'evil
+  (defalias #'forward-evil-word #'forward-evil-symbol))
 
 ;; ============================== Ivy/swiper/counsel ============================== 
 (use-package counsel

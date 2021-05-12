@@ -16,48 +16,41 @@
 ;; Max window as default
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
-;; powline
-;;(require 'powerline-evil)
-;;(powerline-evil-vim-color-theme)
 (display-time-mode t)
 
 ;; ============================== Color Scheme ============================== 
 ;;(custom-set-variables
 ;; '(package-selected-packages (quote (company zenburn-theme color-theme))))
 ;;(load-theme 'zenburn t)
-(load-theme 'monokai t)
+;; (load-theme 'monokai t)
+(use-package monokai-theme
+  :ensure t)
 
 ;; ============================== FONT ============================== 
 ;; 配置cnfonts，原名chinese-font-setup
-(require 'cnfonts)
 ;; 让 cnfonts 随着 Emacs 自动生效。
-(cnfonts-enable)
-;; 让 spacemacs mode-line 中的 Unicode 图标正确显示。
-;; (cnfonts-set-spacemacs-fallback-fonts)
+;; (cnfonts-enable)
+(use-package cnfonts
+  :ensure t)
 
-;;(custom-set-faces
- ;;'(default ((t (:family "Cascadia Mono" :foundry "outline" :slant normal :weight normal :height 130 :width normal)))))
- ;;'(default ((t (:family "Cascadia Mono" :weight normal :height 120 :width normal)))))
+(add-to-list 'default-frame-alist
+	     '(font . "Fira Mono For Powerline-13")
+	     '(font . "WenQuanYi Zen Hei Mono-13")
+	     )
 
-;;; Setting English Font
-;;(set-face-attribute
-;;  'default nil :font "WenQuanYi Zen Hei Mono" :size 14)
-;;;; Setting Chinese Font
-(defun s-font()
-  (interactive)
-  '(default ((t (:family "Cascadia Mono" :weight normal :height 120 :width normal))))
-  (dolist (charset '(kana han symbol cjk-misc bopomofo))
-    (set-fontset-font (frame-parameter nil 'font)
-		      charset
-		      (font-spec :family "WenQuanYi Zen Hei Mono" :size 14))))
+;; (set-frame-font "WenQuanYi Zen Hei Mono-13" nil t)
 
-(add-to-list 'after-make-frame-functions
-	     (lambda (new-frame)
-	       (select-frame new-frame)
-	       (if window-system
-		   (s-font))))
+;; ============================== Whitespace configuration ============================== 
+;; https://dougie.io/emacs/indentation/
 
-(if window-system
-    (s-font))
+;; WARNING: This will change your life
+;; (OPTIONAL) Visualize tabs as a pipe character - "|"
+;; This will also show trailing characters as they are useful to spot.
+(setq whitespace-style '(face tabs tab-mark trailing))
+(custom-set-faces
+ '(whitespace-tab ((t (:foreground "#636363")))))
+(setq whitespace-display-mappings
+  '((tab-mark 9 [124 9] [92 9]))) ; 124 is the ascii ID for '\|'
+(global-whitespace-mode) ; Enable whitespace mode everywhere
 
 (provide 'init-ui)
