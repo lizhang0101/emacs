@@ -34,7 +34,7 @@
   :ensure t)
 
 (add-to-list 'default-frame-alist
-	     '(font . "Fira Mono For Powerline-13")
+	     ;; '(font . "Fira Mono For Powerline-13")
 	     '(font . "WenQuanYi Zen Hei Mono-13")
 	     )
 
