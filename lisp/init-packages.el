@@ -29,15 +29,19 @@
 		      evil-leader
 		      evil-nerd-commenter
 		      which-key
-		      ;;evil-tabs
+		      yasnippet
 		      hungry-delete
 		      swiper
 		      counsel
 		      smartparens
 		      projectile
 		      use-package
+		      ;; --- Git ---
+		      magit
 		      ;; --- Major Mode ---
-		      ;; js2-mode
+		      feature-mode
+		      ;; --- Python ---
+		      elpy
 		      ;; --- Minor Mode ---
 		      ;; nodejs-repl
 		      exec-path-from-shell
@@ -45,7 +49,6 @@
 		      monokai-theme
 		      zenburn-theme
 		      powerline-evil
-		      ;;zenburn 
 		      ;; --- Mode line  ---
 		      moody
 		      minions
