@@ -28,6 +28,7 @@
 		      evil
 		      evil-leader
 		      evil-nerd-commenter
+		      evil-collection
 		      which-key
 		      yasnippet
 		      hungry-delete
@@ -80,12 +81,15 @@
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
 
-;; ============================== Evil ============================== 
+;; ============================== Evil ==============================
 ;; Make <Tab> key work in org mode in Evil
 (setq evil-want-C-i-jump nil)
 
 (use-package evil
   :ensure t
+  :init
+  (setq evil-want-integration t)
+  (setq evil-want-keybinding nil)
   :config
   (evil-mode 1)
 
@@ -103,10 +107,16 @@
 (use-package evil-nerd-commenter
   :ensure t)
 
+;(use-package evil-collection
+  ;:after evil
+  ;:ensure t
+  ;:config
+  ;(evil-collection-init))
+
 (with-eval-after-load 'evil
   (defalias #'forward-evil-word #'forward-evil-symbol))
 
-;; ============================== Ivy/swiper/counsel ============================== 
+;; ============================== Ivy/swiper/counsel ==============================
 (use-package counsel
   :ensure t)
 
@@ -131,7 +141,7 @@
     (global-set-key (kbd "C-c v") 'ivy-push-view)
     (global-set-key (kbd "C-c V") 'ivy-pop-view)))
 
-;; ============================== projectile ============================== 
+;; ============================== projectile ==============================
 (use-package projectile
   :demand
   :init (setq projectile-use-git-grep t)
@@ -139,7 +149,7 @@
   (projectile-global-mode t)
   (setq projectile-completion-system 'ivy))
 
-;; ============================== Mode line ============================== 
+;; ============================== Mode line ==============================
 (use-package moody
   :config
   (setq x-underline-at-descent-line t)
@@ -149,10 +159,14 @@
 (use-package minions
   :config (minions-mode 1))
 
-;; ============================== Which key ============================== 
+;; ============================== Which key ==============================
 (use-package which-key
   :defer nil
   :config (which-key-mode))
+
+;; ============================== Magit ==============================
+(use-package magit
+  :ensure t)
 
 (provide 'init-packages)
 

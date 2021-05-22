@@ -20,6 +20,8 @@
   "e" 'open-init-file
   "ff" 'projectile-find-file
   "fg" 'projectile-grep
+  ;; magit
+  "gg" 'magit-status
   "ww" 'save-buffer
   ;; {{ window move
   "wh" 'evil-window-left
