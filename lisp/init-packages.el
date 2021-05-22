@@ -88,7 +88,7 @@
 (use-package evil
   :ensure t
   :init
-  (setq evil-want-integration t)
+  ;; (setq evil-want-integration t)
   (setq evil-want-keybinding nil)
   :config
   (evil-mode 1)
@@ -107,11 +107,11 @@
 (use-package evil-nerd-commenter
   :ensure t)
 
-;(use-package evil-collection
-  ;:after evil
-  ;:ensure t
-  ;:config
-  ;(evil-collection-init))
+;;(use-package evil-collection
+;;  :after evil
+;;  :ensure t
+;;  :config
+;;  (evil-collection-init))
 
 (with-eval-after-load 'evil
   (defalias #'forward-evil-word #'forward-evil-symbol))
