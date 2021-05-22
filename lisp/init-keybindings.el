@@ -20,6 +20,11 @@
   "e" 'open-init-file
   "ff" 'projectile-find-file
   "fg" 'projectile-grep
-  "w" 'save-buffer)
+  "ww" 'save-buffer
+  ;; {{ window move
+  "wh" 'evil-window-left
+  "wl" 'evil-window-right
+  "wk" 'evil-window-up
+  "wj" 'evil-window-down)
 
 (provide 'init-keybindings)
