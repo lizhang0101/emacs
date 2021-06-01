@@ -12,6 +12,10 @@
 
 ;; leader keybindings - sort order: a-z
 (evil-leader/set-key
+  "1" 'winum-select-window-1
+  "2" 'winum-select-window-2
+  "3" 'winum-select-window-3
+  "4" 'winum-select-window-4
   "a" 'helm-do-ag-project-root
   "b" 'ivy-switch-buffer
   "cc" 'evilnc-comment-or-uncomment-lines

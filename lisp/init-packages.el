@@ -24,16 +24,16 @@
 (defvar my/packages '(
 		      ;; --- Auto completion ---
 		      company
-		      ;; --- Better Editor ---
+		      ;; --- Evil ---
 		      evil
 		      evil-leader
 		      evil-nerd-commenter
 		      evil-collection
+		      ;; --- Better Editor ---
 		      which-key
+		      winum
 		      yasnippet
 		      hungry-delete
-		      swiper
-		      counsel
 		      smartparens
 		      projectile
 		      use-package
@@ -54,6 +54,8 @@
 		      moody
 		      minions
 		      ;; --- Search  ---
+		      swiper
+		      counsel
 		      helm-ag
 		      ;; --- font ---
 		      cnfonts
@@ -170,3 +172,18 @@
 
 (provide 'init-packages)
 
+;; ============================== Magit ==============================
+;; (use-package winum
+;;   :ensure t
+;;   :init((setq winum-format "%s")
+;; 	(setq winum-mode-line-position 0)
+;; 	(set-face-attribute 'winum-face nil :foreground "DeepPink" :underline "DeepPink" :weight 'bold))
+;;   :config(winum-mode)
+;;   )
+
+(with-eval-after-load 'winum
+  (setq winum-format "%s")
+  (setq winum-mode-line-position 0)
+  (set-face-attribute 'winum-face nil :foreground "DeepPink" :underline "DeepPink" :weight 'bold))
+;; }}
+(winum-mode 1)
